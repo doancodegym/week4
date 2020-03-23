@@ -2,32 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Lớp mô ta hình chữ nhật</title>
+    <title>Quản lý sản phẩm</title>
 </head>
 <body>
-<canvas id="myCanvas" width="300" height="300"></canvas>
+<canvas id="myCanvas" width="200" height="100"></canvas>
 <script>
-    let Retangle = function (length, width) {
-        this.getLength = length;
-        this.getWidth = width;
-
-        this.setLength = function (number) { length = number;return this.length
-        };
-        this.setWidth = function (number) { width = number; return this.width
-        };
-        this.retangleArea = function () { this.retangleArea =length*width ; return this.retangleArea
-        };
-        this.retanglePerimeter = function () { this.retanglePerimeter = (length+width)*2 ; return this.retanglePerimeter
+    let Rectangle = function (x,y) {
+        this.x = x;
+        this.y = y;
+        this.setWidth = function () {
+            return this.x;
         }
-    };
-    let a = new Retangle(20,10);
-    let b = a.setWidth(30);
-    let c = a.setLength(20);
-    let d = a.retanglePerimeter();
-    let e = a.retangleArea();
+        this.setLength = function () {
+            return this.y;
+        }
+        this.setPerimeter = function () {
+            return this.x*2+this.y*2;
+        }
+        this.Area = function () {
+            return this.x * this.y;
+        }
+        this.pain = function () {
+            var c=document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(0,0,y,x);
+        }
+    }
+    let chunhat = new Rectangle(75,150);
+    chunhat.pain();
+    document.write("<br>Diện tích : " + chunhat.Area() + "<br>Chu vi : " + chunhat.setPerimeter());
 
-    alert(d);alert(e);
 </script>
-
 </body>
 </html>
