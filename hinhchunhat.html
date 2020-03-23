@@ -22,7 +22,7 @@
         this.Area = function () {
             return this.x * this.y;
         }
-        this.pain = function () {
+        this.paint = function () {
             var c=document.getElementById("myCanvas");
             var ctx = c.getContext("2d");
             ctx.fillStyle = "#FF0000";
@@ -30,7 +30,7 @@
         }
     }
     let chunhat = new Rectangle(75,150);
-    chunhat.pain();
+    chunhat.paint();
     document.write("<br>Diện tích : " + chunhat.Area() + "<br>Chu vi : " + chunhat.setPerimeter());
 
 </script>
