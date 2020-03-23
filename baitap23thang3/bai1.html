@@ -6,18 +6,35 @@
 </head>
 <body>
 <script>
-    let sum = function (x) {
-        this.x = x;
-        this.sumx = function () {
-            let sumtotal = 0;
-            for(i = 0 ; i < x.length ; i++){
-                sumtotal += x[i];
+    let y = parseInt(prompt("Nhập số lượng phần tử : "));
+    var inputArr =[];
+    for(j=0;j< y;j++) {
+        inputArr[j] = parseInt(prompt("Mời nhập vào phần tử thứ " + j));
+    }
+    let result = 0;
+    sum(inputArr);
+    console.log(result);
+    document.write("Tổng các số nguyên tố là : "+result);
+    function sum(x) {
+        for(i=0;i<x.length;i++){
+            if (check(x[i])){
+                result += x[i];
             }
-            return sumtotal;
         }
     }
-    let summ = new sum(x[1,2,3,4,5]);
-    document.write(summ.sumx())
+    function check(num) {
+        if (num < 2)
+            return false;
+        else if (num == 2)
+            return true;
+        else
+            for (let i = 2; i < num; i++) {
+                if (num % i == 0) {
+                    return false;
+                }
+            }
+        return true;
+    }
 </script>
 </body>
 </html>

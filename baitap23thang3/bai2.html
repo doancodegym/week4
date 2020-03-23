@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let y = parseInt(prompt("Mời nhập số lượng phần tử "));
+    var x =[];
+    for(j=0;j<y;j++){
+        x[j] = parseInt(prompt("Mời nhập vào phần tử thứ "+j));
+    }
+    function sum(x) {
+        let result=0;
+        for(i=0;i<x.length;i++){
+            if(x[i]>0){
+                result += x[i];
+            }
+        }
+        return result;
+    }
+    document.write("Tổng các số nguyên dương trong mảng là: " + sum(x));
+</script>
+</body>
+</html>
