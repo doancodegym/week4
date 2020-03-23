@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lớp mô ta hình chữ nhật</title>
+</head>
+<body>
+<canvas id="myCanvas" width="300" height="300"></canvas>
+<script>
+    let Retangle = function (length, width) {
+        this.getLength = length;
+        this.getWidth = width;
+
+        this.setLength = function (number) { length = number;return this.length
+        };
+        this.setWidth = function (number) { width = number; return this.width
+        };
+        this.retangleArea = function () { this.retangleArea =length*width ; return this.retangleArea
+        };
+        this.retanglePerimeter = function () { this.retanglePerimeter = (length+width)*2 ; return this.retanglePerimeter
+        }
+    };
+    let a = new Retangle(20,10);
+    let b = a.setWidth(30);
+    let c = a.setLength(20);
+    let d = a.retanglePerimeter();
+    let e = a.retangleArea();
+
+    alert(d);alert(e);
+</script>
+
+</body>
+</html>

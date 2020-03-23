@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp Day</title>
+</head>
+<body>
+<script>
+    let Date = function (day,moth,year) {
+        this.day = day;
+        this.moth = moth;
+        this.year = year;
+    }
+    this.getDay = function () {
+        return this.day ;
+    }
+    this.getMoth = function () {
+        return this.moth;
+    }
+    this.getYear = function () {
+        return this.year;
+    }
+    this.setDate = function (day,moth,year) {
+        this.day = day;
+        this.moth = moth;
+        this.year = year;
+    }
+    let Today = Date(20,3,2020);
+    alert(this.day +'/' + this.moth + '/' + this.year);
+</script>
+</body>
+</html>

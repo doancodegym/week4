@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ đường tròn</title>
+</head>
+<body>
+<script>
+    let Circle = function (radius) {
+        this.radius= radius;
+        this.getArea = function () {
+            return Math.PI*this.radius*this.radius;
+        };
+        this.getRadius = function () {
+            return this.radius;
+        };
+    };
+    let circle1 = new Circle(2);
+    document.write('Bán kính : ' + circle1.getRadius() + ' <br> Diện tích : ' + circle1.getArea());
+</script>
+</body>
+</html>

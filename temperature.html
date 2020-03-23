@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Temperature</title>
+</head>
+<body>
+<script>
+    let Temperature = function (value) {
+        this.value = value;
+        this.fahrenheit = function () {
+            return this.value*1.8+32;
+        }
+        this.kenvin = function () {
+            return this.value + 273.15;
+        }
+    }
+    let Celsius = new Temperature(25);
+    document.write("Chuyển đổi 25 độ C thành <br>Độ F : " + Celsius.fahrenheit() + "<br>Độ K : " + Celsius.kenvin());
+</script>
+</body>
+</html>

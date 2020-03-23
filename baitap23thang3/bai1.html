@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let sum = function (x) {
+        this.x = x;
+        this.sumx = function () {
+            let sumtotal = 0;
+            for(i = 0 ; i < x.length ; i++){
+                sumtotal += x[i];
+            }
+            return sumtotal;
+        }
+    }
+    let summ = new sum(x[1,2,3,4,5]);
+    document.write(summ.sumx())
+</script>
+</body>
+</html>
