@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Mobile = function (batery,draft, inbox,sent, status) {
+        this.batery = batery;
+        this.draft = draft;
+        this.inbox = inbox;
+        this.sent = sent;
+        this.status = status;
+        this.power = function () {
+            if(this.batery > 0)
+                this.status = !this.status;
+            else this.status = false;
+        }
+        this.charge = function () {
+            this.batery = 100;
+            console.log('Pin đầy');
+        }
+        this.setDraft = function (x) {
+            if(this.status===true){
+                this.draft = x;
+                this.batery --;
+            }
+        }
+        this.sentMes = function (mobile) {
+            if (this.status){
+                this.sent.push(this.draft);
+                mobile.inbox.push(this.draft);
+                this.draft = "";
+                this.batery --;
+            }
+        }
+    }
+    let nokia = new Mobile(10, "", [],[], true);
+    let iphone = new Mobile(10, "", [],[], true);
+</script>
+</body>
+</html>

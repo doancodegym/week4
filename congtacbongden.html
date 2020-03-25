@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let ElectricLamp = function () {
+        this.turnOn = function () {
+            console.log('Đèn sáng');
+        }
+        this.turnOff = function () {
+            console.log('Đèn tắt');
+        }
+    }
+    let SwitchButton = function () {
+        this.turnOn = function (ElectricLamp) {
+            ElectricLamp.turnOn();
+        }
+        this.turnOff = function (ElectricLamp) {
+            ElectricLamp.turnOff();
+        }
+    }
+    let elect1 = new ElectricLamp();
+    let button1 = new SwitchButton();
+</script>
+</body>
+</html>

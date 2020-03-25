@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Apple = function (weight) {
+        this.weight = weight;
+        this.decreaseNutrium = function () {
+            if (this.weight > 0){
+                this.weight--;
+            }
+        }
+        this.getWeight = function (x) {
+            this.weight = x;
+        }
+            return this.weight;
+    }
+    let Human = function (name,gender,weight) {
+        this.name = name;
+        this.gender = gender;
+        this.weight = weight;
+        this.checkApple = function (Apple) {
+            Apple.weight();
+        }
+        this.eat = function (Apple) {
+            Apple.decreaseNutrium();
+            this.weight++;
+        }
+        this.speak = function () {
+            console.log('Hello Apple !');
+        }
+    }
+    let apple1 = new Apple(10);
+    let human1 = new Human("Tony","male",60);
+</script>
+</body>
+</html>

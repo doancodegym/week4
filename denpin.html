@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let Battery = function (enegy) {
+        this.enegy = enegy;
+        this.getEnegy = function () {
+            return this.enegy;
+        }
+        this.decreaseEnergy = function () {
+            if (this.enegy > 0){
+                this.enegy--;
+            }
+        }
+        }
+    let FlashLamp = function () {
+        this.setBattery = function (battery) {
+            this.battery = battery;
+        }
+        this.getInfo = function () {
+            return this.battery.getEnegy();
+        }
+        this.turnOn = function () {
+            this.status = true;
+        }
+        this.turnOff = function () {
+            this.status = false;
+        }
+        this.light = function () {
+            if(this.status){
+                console.log('Đèn sáng');
+            }
+            else {
+                console.log('Đèn tắt');
+            }
+        }
+    }
+    let battery1 = new Battery(100);
+    let flash1 = new FlashLamp(battery1);
+
+</script>
+</body>
+</html>
