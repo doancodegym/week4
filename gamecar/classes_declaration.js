@@ -75,6 +75,6 @@ let GameScreen = function(height, width) {
         let canvas = document.getElementById("myCanvas");
         let context = canvas.getContext("2d");
 
-        context.clearRect(0, 0, canvas.clientHeight, canvas.clientWidth);
+        context.clearRect(0, 0, canvas.clientWidth, canvas.clientHeight);
     }
 };
